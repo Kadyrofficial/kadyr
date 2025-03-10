@@ -27,7 +27,7 @@ export const Header: React.FC<Props> = ({ className }) => {
     
     return (
         <>
-            <header className={cn('z-50 fixed w-full h-12 flex justify-between px-2', className)}>
+            <header className={cn('z-50 fixed w-full h-12 flex justify-between px-2 bg-background/75 backdrop-blur-md', className)}>
                 <span className={cn('h-full flex items-center px-2', className)}>
                     <Image src={"/logo.svg"} width={24} height={24} alt={"Kadyr"} />
                 </span>

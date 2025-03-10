@@ -20,12 +20,12 @@ export const MenuBar: React.FC<Props> = ({ className, menuData }) => {
 
     return (
         <>
-            <span onClick={() => setIsOpen((prev) => !prev)} className={cn('relative h-full flex items-center px-2', className)}>
+            <span onClick={() => setIsOpen((prev) => !prev)} className={cn('relative h-full flex items-center px-2 bg-white/70 backdrop-blur-lg', className)}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                     <motion.path d="M3.75 9 H20.25" animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 3 : 0 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                     <motion.path d="M3.75 15.75 H20.25" animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -3 : 0 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 </svg>
-                <nav className={cn(`bg-background shadow-md absolute top-full right-0 border-1 pl-4 pr-8 py-2 rounded-lg transition-all duration-300 opacity-0  ${isOpen ? 'opacity-100 scale-100 translate-y-2' : 'pointer-events-none'}`, className)}>
+                <nav className={cn(`bg-white/50 backdrop-blur-md shadow-sm absolute top-full right-0 border border-gray-200 pl-4 pr-8 py-2 rounded-lg transition-all scale-95 duration-300 opacity-0 ${isOpen ? 'opacity-100 scale-100 translate-y-2' : 'pointer-events-none'}`, className)}>
                     <ul className={cn('font-medium text-lg', className)}>
                         {menuData.map((item, index) => (
                             <Link key={index} href={""}>

@@ -5,6 +5,7 @@ import {routing} from '@/i18n/routing';
 import { Header } from '@/components/shared';
 import '../globals.css'
 
+
 export default async function LocaleLayout({
     children,
     params
