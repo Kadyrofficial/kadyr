@@ -4,7 +4,6 @@ import React from "react";
 import {cn} from '@/lib/utils'
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "../ui";
-import {useLocale, useTranslations} from 'next-intl';
 import Autoplay from "embla-carousel-autoplay"
 
 
@@ -13,11 +12,9 @@ interface Props {
 }
 
 export const IntroductionCarousel: React.FC<Props> = ({className}) => {
-    const t = useTranslations('HomePage');
     const plugin = React.useRef(
         Autoplay({ delay: 5000, stopOnInteraction: false })
     )
-    const locale = useLocale()
 
     return (
         <Carousel className={cn('w-full max-w-lg overflow-hidden rounded-xl', className)} opts={{align: "start", loop: true}} plugins={[plugin.current]}>
