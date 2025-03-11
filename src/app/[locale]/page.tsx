@@ -1,5 +1,5 @@
 import {useTranslations} from 'next-intl';
-import { Introduction } from '@/components/shared/introduction';
+import { Services, Introduction, Blogs } from '@/components/shared';
 
 
 export default function HomePage() {
@@ -7,7 +7,8 @@ export default function HomePage() {
     return (
         <>
             <Introduction />
-            <Introduction />
+            <Services />
+            <Blogs />
         </>
     );
 }
