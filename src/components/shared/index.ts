@@ -1,4 +1,6 @@
 export { Header } from './header'
 export { Introduction } from './introduction'
 export { Services } from './services'
+export { About } from './about'
 export { Blogs } from './blogs'
+export { Contact } from './contact'

@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import Image from 'next/image'
 import { Button } from "../ui";
+import Link from 'next/link'
 
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
 export const Introduction: React.FC<Props> = ({ className }) => {
 
     return (
-        <section className={cn('w-full flex flex-col items-center pt-14 sm:pt-16 pb-2 sm:pb-6 bg-zinc-100', className)}>
+        <section id="home" className={cn('w-full flex flex-col items-center pt-14 sm:pt-16 pb-2 sm:pb-6 bg-zinc-100', className)}>
             <div className={cn('rounded-xl px-2 sm:px-3 lg:px-4 w-full max-w-7xl h-full sm:flex sm:flex-row-reverse justify-center', className)}>
                 <div className={cn('w-full md:flex md:items-center md:gap-4', className)}>
                     <div className={cn('relative w-3/5 aspect-3/5 hidden md:block', className)}>
@@ -27,9 +28,14 @@ export const Introduction: React.FC<Props> = ({ className }) => {
                         <span className={cn('font-medium text-lg lg:text-xl xl:text-3xl', className)}>Full-stack web developer</span>
                     </div>
                     <span className={cn('md:text-lg', className)}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos</span>
-                    <div className={cn('flex gap-2 *:rounded-full *:cursor-pointer xl:*:h-10 xl:*:px-6', className)}>
-                        <Button>About me</Button>
-                        <Button variant={'outline'}>Contact</Button>
+                    <div className={cn('flex gap-2 ', className)}>
+                        <Link href={"#about"}>
+                            <Button className={cn('rounded-full cursor-pointer xl:h-10 xl:px-6', className)}>About me</Button>
+                        </Link>
+                        <Link href={"#contact"}>
+                            <Button className={cn('rounded-full cursor-pointer xl:h-10 xl:px-6', className)} variant={'outline'}>Contact</Button>
+                        </Link>
+                        
                     </div>
                 </div>
             </div>

@@ -14,16 +14,24 @@ interface Props {
 
 const menuData = [
     {
-        'title': 'Home'
+        'title': 'Home',
+        'link': '#home'
     },
     {
-        'title': 'Services'
+        'title': 'Services',
+        'link': '#services'
     },
     {
-        'title': 'Blogs'
+        'title': 'About',
+        'link': '#about'
     },
     {
-        'title': 'Contact'
+        'title': 'Blogs',
+        'link': '#blogs'
+    },
+    {
+        'title': 'Contact',
+        'link': '#contact'
     },
 ]
 
@@ -31,7 +39,7 @@ const Links: React.FC<Props> = ({ className }) => {
     return (
         <>
             {menuData.map((item, index) => (
-                <Link key={index} className={className} href={""}>
+                <Link key={index} className={className} href={item.link}>
                     {item.title}
                 </Link>
             ))}
@@ -68,7 +76,7 @@ export const Header: React.FC<Props> = ({ className }) => {
     
     return (
         <>
-            <header className={cn('z-50 fixed w-full flex flex-col items-center h-12 bg-background/75 backdrop-blur-md', className)}>
+            <header className={cn('z-50 fixed w-full flex flex-col items-center h-12 bg-zinc-50/75 backdrop-blur-md', className)}>
                 <div className={cn('w-full max-w-7xl h-full flex justify-between px-2 sm:px-3 lg:px-4', className)}>
                     <Link className={cn('group h-full flex items-center px-2', className)} href={'/'}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" className={cn('fill-text-hover group-hover:fill-text w-6 h-6', className)}>
@@ -88,7 +96,7 @@ export const Header: React.FC<Props> = ({ className }) => {
             </header>
             <div ref={menuRef}>
                 <nav className={cn(`z-50 bg-background/75 flex flex-col text-lg font-medium *:py-2 *:hover:bg-zinc-100 text-text-hover *:hover:text-text *:rounded-lg *:pr-8 *:pl-4 backdrop-blur-md shadow-sm fixed top-12 right-2 border border-gray-200 p-2 rounded-lg transition-all scale-95 duration-200 opacity-0 sm:hidden ${isOpen ? 'opacity-100 scale-100 translate-y-2' : 'pointer-events-none'}`, className)}>
-                    <Links className={""} />
+                    <Links />
                 </nav>
             </div>
         </>

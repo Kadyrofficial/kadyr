@@ -1,4 +1,4 @@
-import { Services, Introduction, Blogs } from '@/components/shared';
+import { Services, Introduction, Blogs, About, Contact } from '@/components/shared';
 
 
 export default function HomePage() {
@@ -6,7 +6,9 @@ export default function HomePage() {
         <>
             <Introduction />
             <Services />
+            <About />
             <Blogs />
+            <Contact />
         </>
     );
 }
