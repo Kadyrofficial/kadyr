@@ -17,7 +17,7 @@ export const MenuBar: React.FC<Props> = ({ className, isOpen, setIsOpen, buttonR
     };
 
     return (
-        <span ref={buttonRef} onClick={handleClick} className={cn('relative h-full flex items-center px-2 sm:hidden', className)}>
+        <span ref={buttonRef} onClick={handleClick} className={cn('relative flex items-center sm:hidden', className)}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" className={cn(`size-6 ${isOpen ? 'stroke-zinc-900' : 'stroke-zinc-700'}`, className)}>
                 <motion.path d="M3.75 9 H20.25" animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 3 : 0 }} transition={{ duration: 0.2, ease: "easeInOut" }} />
                 <motion.path d="M3.75 15.75 H20.25" animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -3 : 0 }} transition={{ duration: 0.2, ease: "easeInOut" }} />

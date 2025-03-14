@@ -3,6 +3,7 @@ import React from "react";
 import Image from 'next/image'
 import { Button } from "../ui";
 import Link from 'next/link'
+import { Section } from "./section";
 
 
 interface Props {
@@ -12,8 +13,8 @@ interface Props {
 export const Introduction: React.FC<Props> = ({ className }) => {
 
     return (
-        <section id="home" className={cn('w-full flex flex-col items-center pt-14 sm:pt-16 pb-2 sm:pb-6 bg-zinc-100', className)}>
-            <div className={cn('rounded-xl px-2 sm:px-3 lg:px-4 w-full max-w-7xl h-full sm:flex sm:flex-row-reverse justify-center', className)}>
+        <Section id="home" bg={"gray"}>
+            <div className={cn('sm:flex sm:flex-row-reverse justify-center', className)}>
                 <div className={cn('w-full md:flex md:items-center md:gap-4', className)}>
                     <div className={cn('relative w-3/5 aspect-3/5 hidden md:block', className)}>
                         <Image src={"/introduction-image-1.jpg"} fill className={cn('object-cover rounded-xl', className)} alt={"image-1"} />
@@ -35,10 +36,9 @@ export const Introduction: React.FC<Props> = ({ className }) => {
                         <Link href={"#contact"}>
                             <Button className={cn('rounded-full cursor-pointer xl:h-10 xl:px-6', className)} variant={'outline'}>Contact</Button>
                         </Link>
-                        
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     )
 }

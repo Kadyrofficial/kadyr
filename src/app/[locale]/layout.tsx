@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { Header } from '@/components/shared';
+import { Footer, Header } from '@/components/shared';
 import '../globals.css';
 
 
@@ -28,7 +28,10 @@ export default async function LocaleLayout({
             <body className="text-text">
                 <NextIntlClientProvider messages={messages}>
                     <Header />
-                    {children}
+                    <main>
+                        {children}
+                    </main>
+                    <Footer />
                 </NextIntlClientProvider>
             </body>
         </html>
