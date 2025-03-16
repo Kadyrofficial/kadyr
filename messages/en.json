@@ -1,10 +1,23 @@
 {
     "HomePage": {
-        "title": "Hello world!",
-        "about": "Go to the about page"
+        "title": "Hi, I'm Kadyr",
+        "subtitle": "A Full-Stack Developer",
+        "description": "I'm a full-stack developer with expertise in front-end and back-end technologies. I specialize in creating large-scale web applications.",
+        "about_me_btn": "About me",
+        "contact_btn": "Contact"
     },
-    "AuthPage": {
-        "title": "Hello world!",
-        "about": "Go to the about page"
+    "ServicesPage": {
+        "services": "Services",
+        "frontend": "Front-end",
+        "backend": "Back-end",
+        "ui_ux_design": "UI & UX Design",
+        "mobile_app": "Mobile App"
+    },
+    "AboutPage": {
+        "about": "About",
+        "title": "Let's Connect!",
+        "subtitle": "Building seamless, scalable, and efficient web applications.",
+        "content_title": "About me",
+        "content": "I'm a passionate full-stack developer with expertise in front-end and back-end technologies. I specialize in creating dynamic, responsive, and user-friendly web applications. With a strong foundation in modern frameworks like React, Node.js, and databases such as MongoDB and PostgreSQL, I turn ideas into digital experiences."
     }
 }

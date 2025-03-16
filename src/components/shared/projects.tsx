@@ -24,6 +24,20 @@ const projects = [
         'name': 'Design in the Age og AI: how to adapt lazily',
         'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex, consequuntur'
     },
+    {
+        'link': '',
+        'img': '/introduction-image-1.jpg',
+        'hover_txt': 'Visit Site',
+        'name': 'Design in the Age og AI: how to adapt lazily',
+        'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex, consequuntur'
+    },
+    {
+        'link': '',
+        'img': '/introduction-image-1.jpg',
+        'hover_txt': 'Visit Site',
+        'name': 'Design in the Age og AI: how to adapt lazily',
+        'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex, consequuntur'
+    },
 ]
 
 export const Projects: React.FC<Props> = ({ className }) => {
@@ -39,10 +53,9 @@ export const Projects: React.FC<Props> = ({ className }) => {
                                 <p className={cn('text-center font-bold text-2xl text-background', className)}>{item.hover_txt}</p>
                             </div>
                         </div>
-                        
                         <div className={cn('py-2 pl-2 pr-8 *:truncate *:overflow-hidden', className)}>
-                            <p className={cn('text-lg md:text-xl font-medium', className)}>{item.name}</p>
-                            <p className={cn('md:text-lg', className)}>{item.description}</p>
+                            <p className={cn('text-lg font-medium', className)}>{item.name}</p>
+                            <p>{item.description}</p>
                         </div>
                     </Link>
                 ))}
